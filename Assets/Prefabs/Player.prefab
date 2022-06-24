@@ -253,11 +253,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db35d0ea13da664ebabb064eee6b3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
   movePoint: {fileID: 9073851569470139012}
-  wallLayer:
+  blockingLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
+  moveSpeed: 10
   playerAnimator: {fileID: 9073851568585376453}
 --- !u!61 &9073851569941281049
 BoxCollider2D:
