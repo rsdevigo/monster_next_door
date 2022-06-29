@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9073851568585376451}
   - component: {fileID: 9073851568585376452}
   - component: {fileID: 9073851568585376453}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9073851569470139012}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MovePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9073851569668930771}
   - component: {fileID: 9073851569668930772}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,8 +216,8 @@ GameObject:
   - component: {fileID: 9073851569941281048}
   - component: {fileID: 9073851569941281049}
   - component: {fileID: 9073851569941281050}
-  - component: {fileID: 9073851569941281051}
-  m_Layer: 0
+  - component: {fileID: 901578184}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9073851569941281051
+--- !u!114 &901578184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9073851569941281510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 087ef9e42700c4a40a3f06112558c1db, type: 3}
+  m_Script: {fileID: 11500000, guid: 29ac64e123b7aaa40adecd5611222db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 89747ea0d4ce2d84c9277065c3aa85ba, type: 2}
+  Config: {fileID: 11400000, guid: b326ffdf8cda603499980307d04a352b, type: 2}

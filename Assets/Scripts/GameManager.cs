@@ -6,7 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     public bool isPlayerTurn = true;
     private bool isEnemyMoving = false;
-    public EnemyMovement[] enemies;
+    public Enemy[] enemies;
 
     void Update()
     {
@@ -18,9 +18,11 @@ public class GameManager : Singleton<GameManager>
 
     private IEnumerator MoveEnemies(){
         isEnemyMoving = true;
-        foreach(EnemyMovement enemy in enemies) {
-            enemy.MoveEnemy();
-            yield return new WaitForSeconds(1.0f/enemy.moveSpeed);
+        foreach(Enemy enemy in enemies) {
+            if (!enemy.isDead) {
+                enemy.MoveEnemy();
+                yield return new WaitForSeconds(1.0f/enemy.moveSpeed);
+            }
         }
 
         isEnemyMoving = false;

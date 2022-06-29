@@ -10,7 +10,7 @@ public abstract class MovingObject : MonoBehaviour
     public LayerMask blockingLayer;
     public float moveSpeed = 5.0f;
 
-    public virtual void AttemptMove <T> (Vector2 position) where T : Component {
+    public virtual void AttemptMove <T> (Vector2 position) where T : IInteractive {
         RaycastHit2D hit;
         bool canMove = Move(position, out hit);
         if (hit.transform == null)
@@ -43,5 +43,5 @@ public abstract class MovingObject : MonoBehaviour
         isMoving = false;
     }
 
-    protected abstract void OnCantMove <T> (T component) where T : Component;
+    protected abstract void OnCantMove <T> (T component) where T : IInteractive;
 }
