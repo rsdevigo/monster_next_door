@@ -55,9 +55,6 @@ sysinfo.txt
 # Unity 3D user settings
 UserSettings*
 
-# Unity 3D Project settings
-ProjectSettings*
-
 # Builds
 *.apk
 *.unitypackage
