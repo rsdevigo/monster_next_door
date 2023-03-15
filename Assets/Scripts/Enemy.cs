@@ -22,7 +22,6 @@ public class Enemy : MovingObject, IDamageable
     public void MoveEnemy()
     {
         path = SAP2DPathfinder.singleton.FindPath(transform.position, target.transform.position, config);
-        Debug.Log(path);
         if (path != null) {
             AttemptMove<IInteractive>(path[0]);
         }

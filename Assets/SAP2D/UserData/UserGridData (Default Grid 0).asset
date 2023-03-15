@@ -63,22 +63,6 @@ MonoBehaviour:
     gridY: 18
   - isWalkable: 0
     walkableLock: 1
-    gridX: 30
-    gridY: 18
-  - isWalkable: 0
-    walkableLock: 1
-    gridX: 31
-    gridY: 18
-  - isWalkable: 0
-    walkableLock: 1
-    gridX: 32
-    gridY: 18
-  - isWalkable: 0
-    walkableLock: 1
-    gridX: 33
-    gridY: 18
-  - isWalkable: 0
-    walkableLock: 1
     gridX: 34
     gridY: 18
   - isWalkable: 0
@@ -485,3 +469,27 @@ MonoBehaviour:
     walkableLock: 1
     gridX: 20
     gridY: 23
+  - isWalkable: 0
+    walkableLock: 1
+    gridX: 29
+    gridY: 19
+  - isWalkable: 0
+    walkableLock: 1
+    gridX: 30
+    gridY: 19
+  - isWalkable: 0
+    walkableLock: 1
+    gridX: 31
+    gridY: 19
+  - isWalkable: 0
+    walkableLock: 1
+    gridX: 32
+    gridY: 19
+  - isWalkable: 0
+    walkableLock: 1
+    gridX: 33
+    gridY: 19
+  - isWalkable: 0
+    walkableLock: 1
+    gridX: 34
+    gridY: 19
