@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door :MonoBehaviour, IInteractive
+public class Door : MonoBehaviour, IInteractive
 {
     public bool isOpen = false;
     [SerializeField]
