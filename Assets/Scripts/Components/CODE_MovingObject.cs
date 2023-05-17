@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class CODE_MovingObject : MonoBehaviour
 {
     protected bool isMoving;
@@ -50,3 +50,4 @@ public class CODE_MovingObject : MonoBehaviour
 
     protected abstract void OnCantMove<T>(T component) where T : CODE_IInteractive;
 }
+*/

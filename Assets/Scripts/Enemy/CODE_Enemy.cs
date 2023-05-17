@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
 {
     public Animator enemyAnimator;
@@ -50,4 +50,4 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
     {
         Debug.Log("Atacou o Inimigo");
     }
-}
+}*/
