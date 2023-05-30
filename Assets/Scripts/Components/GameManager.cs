@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*using Patterns;
+using Patterns;
+
 public class GameManager : Singleton<GameManager>
 {
     public bool isPlayerTurn = true;
@@ -28,4 +29,4 @@ public class GameManager : Singleton<GameManager>
         isEnemyMoving = false;
         isPlayerTurn = true;
     }
-}*/
+}

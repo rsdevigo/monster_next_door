@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
+
 public class CODE_Player : CODE_MovingObject, CODE_IDamageable
 {
     public Animator playerAnimator;
@@ -60,4 +60,4 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     {
         Debug.Log("Atacou o Jogador");
     }
-}*/
+}
