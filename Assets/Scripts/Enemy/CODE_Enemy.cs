@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SAP2D;
 public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
 {
     public Animator enemyAnimator;
@@ -18,7 +18,6 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         movePoint.parent = null;
         isMoving = false;
     }
-
     public void MoveEnemy()
     {
         path = SAP2DPathfinder.singleton.FindPath(transform.position, target.transform.position, config);
@@ -28,7 +27,7 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         }
     }
 
-    protected override void OnCantMove<IInteractive>(CODE_IInteractive component)
+    protected override void OnCantMove<CODE_IInteractive>(CODE_IInteractive component)
     {
         CODE_IDamageable damageable = component as CODE_IDamageable;
         if (damageable != null)

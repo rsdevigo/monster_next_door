@@ -44,7 +44,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
         }
         GameManager.Instance.isPlayerTurn = false;
     }
-
+  
     protected override IEnumerator SmoothMove()
     {
         yield return base.SmoothMove();

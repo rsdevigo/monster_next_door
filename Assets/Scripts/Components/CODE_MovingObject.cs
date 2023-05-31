@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CODE_MovingObject : MonoBehaviour
+public abstract class CODE_MovingObject : MonoBehaviour
 {
     protected bool isMoving;
     [SerializeField]
