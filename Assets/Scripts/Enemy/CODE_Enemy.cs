@@ -1,22 +1,24 @@
+using SAP2D;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SAP2D;
 public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
 {
     public Animator enemyAnimator;
     public CODE_Player target;
+    public int power = 1;
+    public bool isDead = false;
     [SerializeField]
     private SAP2DPathfindingConfig config;
     public Vector2[] path;
-    public int power = 1;
-    public bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
         movePoint.parent = null;
         isMoving = false;
+     
+    
     }
     public void MoveEnemy()
     {

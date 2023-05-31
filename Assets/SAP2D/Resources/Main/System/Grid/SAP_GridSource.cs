@@ -189,6 +189,7 @@ namespace SAP2D {
                     if (x == 0 && y == 0) continue;
                     int currX = tile.x + x;
                     int currY = tile.y + y;
+                    if (currX != tile.x && currY != tile.y) continue;
                     if (currX >= 0 && currY >= 0 && currX < width && currY < height)
                     {
                         SAP_TileData currTile = GetTileDataAt(currX, currY);

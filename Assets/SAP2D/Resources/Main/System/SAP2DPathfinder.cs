@@ -92,7 +92,7 @@ namespace SAP2D {
 
                 if (currentTile == null)
                 {
-                    Debug.LogError("Path not found");
+                    //Debug.LogError("Path not found");
                     return null;
                 }
             }
