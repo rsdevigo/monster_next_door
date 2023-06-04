@@ -7,6 +7,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     public Animator playerAnimator;
     public int level = 1;
     public int bonus = 0;
+    public int currentLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     // Update is called once per frame
     void Update()
     {
+        currentLevel = level + bonus;
         playerAnimator.SetBool("isMoving", isMoving);
         if (!isMoving && GameManager.Instance.isPlayerTurn)
         {
