@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
     public bool isPlayerTurn = true;
     private bool isEnemyMoving = false;
     public CODE_Enemy[] enemies;
+    public bool equippedItem = false;
 
     void Update()
     {

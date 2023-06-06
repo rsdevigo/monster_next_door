@@ -8,7 +8,11 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     public int level = 1;
     public int bonus = 0;
     public int currentLevel;
+    public delegate void ChangeItem();
+    public event ChangeItem ChangedItem;
+
     // Start is called before the first frame update
+
     void Start()
     {
         movePoint.parent = null;
@@ -43,6 +47,15 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
         else
         {
             component.Interact();
+          if (GameManager.Instance.equippedItem == true)
+            {
+
+                if (ChangedItem != null)
+                {
+                    ChangedItem();
+                }
+                
+            }
         }
         GameManager.Instance.isPlayerTurn = false;
     }

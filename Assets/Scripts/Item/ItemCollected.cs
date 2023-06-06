@@ -9,13 +9,14 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
 
     public string nome;
     public int bonus;
-    public Sprite icon;
+    public SpriteRenderer icon;
+    public CODE_UIManager ui;
   
     private void Start()
     {
         nome= item.nome;
         bonus= item.bonus;
-        icon= item.icon;
+        icon.sprite = item.icon;
     }
 
     public void Interact()
@@ -23,12 +24,29 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
         if (player.bonus == 0)
         {
             player.bonus = this.item.bonus;
+            ui.GetImageEquippedItem(item.icon);
+            
             Destroy(this.gameObject);
         }
         else
         {
-            // Adicionar o Canvas
-            Debug.Log("deseja trocar?");
+            // faz com que chame o evento para mostrar a hud
+            GameManager.Instance.equippedItem = true;
+            ui.GetNewItemImage(item.icon);
+
+            if(ui.desejatrocar==true)
+            {
+                player.bonus = this.item.bonus;
+                ui.GetImageEquippedItem(item.icon);
+
+                Destroy(this.gameObject);
+
+            }
+            
+        
         }
     }
+
+
+   
 }
