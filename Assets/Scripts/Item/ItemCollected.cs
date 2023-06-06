@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemCollected : MonoBehaviour
+public class ItemCollected : MonoBehaviour, CODE_IInteractive
 {
     public CODE_Item_SO item;
     public CODE_Player player;
@@ -17,21 +17,18 @@ public class ItemCollected : MonoBehaviour
         bonus= item.bonus;
         icon= item.icon;
     }
-    public void GetItem( CODE_Player player)
-    {
-        player.bonus = item.bonus;
 
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Interact()
     {
-        if( collision.CompareTag("Player"))
+        if (player.bonus == 0)
         {
-            GetItem(player);
+            player.bonus = this.item.bonus;
             Destroy(this.gameObject);
         }
-     
+        else
+        {
+            // Adicionar o Canvas
+            Debug.Log("deseja trocar?");
+        }
     }
-
-
-
 }

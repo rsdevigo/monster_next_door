@@ -36,10 +36,6 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         {
             damageable.Damage(power);
         }
-        else
-        {
-            component.Interact();
-        }
     }
 
     public void Interact()

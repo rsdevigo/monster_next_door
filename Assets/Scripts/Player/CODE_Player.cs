@@ -53,11 +53,6 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
         GameManager.Instance.isPlayerTurn = false;
     }
 
-    public void Interact()
-    {
-        Debug.Log("Interagiu com o Jogador");
-    }
-
     public void Damage(int power)
     {
         Debug.Log("Atacou o Jogador");
