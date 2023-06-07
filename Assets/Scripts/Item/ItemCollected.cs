@@ -17,6 +17,19 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
         nome= item.nome;
         bonus= item.bonus;
         icon.sprite = item.icon;
+        player = FindObjectOfType<CODE_Player>();
+    }
+
+    private void Update()
+    {
+        if (ui.desejatrocar == true)
+        {
+            player.bonus = this.item.bonus;
+            ui.GetImageEquippedItem(item.icon);
+
+            Destroy(this.gameObject);
+
+        }
     }
 
     public void Interact()
@@ -34,16 +47,7 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
             GameManager.Instance.equippedItem = true;
             ui.GetNewItemImage(item.icon);
 
-            if(ui.desejatrocar==true)
-            {
-                player.bonus = this.item.bonus;
-                ui.GetImageEquippedItem(item.icon);
-
-                Destroy(this.gameObject);
-
-            }
-            
-        
+            GameManager.Instance.menuState = true;
         }
     }
 

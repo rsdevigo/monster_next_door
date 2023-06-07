@@ -33,7 +33,8 @@ public class CODE_UIManager : MonoBehaviour
     {
         panel.SetActive(false);
         desejatrocar = true;
-     
+
+        GameManager.Instance.menuState = false;
     }
    
   
@@ -41,8 +42,10 @@ public class CODE_UIManager : MonoBehaviour
     {
         panel.SetActive(false);
         desejatrocar=false;
-     
+
+        GameManager.Instance.menuState = false;
+
     }
 
-   
+
 }

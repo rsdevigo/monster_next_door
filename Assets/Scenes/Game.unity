@@ -647,7 +647,7 @@ MonoBehaviour:
   moveSpeed: 10
   enemyAnimator: {fileID: 2088577978}
   target: {fileID: 738513951}
-  power: 1
+  power: 5
   isDead: 0
   config: {fileID: 11400000, guid: b326ffdf8cda603499980307d04a352b, type: 2}
   path: []
@@ -6444,6 +6444,7 @@ MonoBehaviour:
   level: 1
   bonus: 0
   currentLevel: 0
+  isDead: 0
 --- !u!4 &738513952
 Transform:
   m_ObjectHideFlags: 0
@@ -6817,7 +6818,7 @@ MonoBehaviour:
     ShowGridParameters: 1
     ShowPathfindingSettings: 1
     ShowGridGraphSettigs: 0
-    ScaleLvl: 16
+    ScaleLvl: 1
   EditorSettings: {fileID: 11400000, guid: f54fe2e0866d59148bb49fcb7b6fd41b, type: 2}
   grids:
   - GridName: Default Grid 0
@@ -12638,6 +12639,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 449733969}
   equippedItem: 0
+  menuState: 0
 --- !u!4 &1938399379
 Transform:
   m_ObjectHideFlags: 0

@@ -20,6 +20,10 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
      
     
     }
+    private void Update()
+    {
+        //Debug.Log(isDead);
+    }
     public void MoveEnemy()
     {
         path = SAP2DPathfinder.singleton.FindPath(transform.position, target.transform.position, config);
@@ -36,6 +40,10 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         {
             damageable.Damage(power);
         }
+        else
+        {
+            component.Interact();
+        }
     }
 
     public void Interact()
@@ -43,8 +51,17 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         Debug.Log("Interagiu com o Inimigo");
     }
 
-    public void Damage(int power)
+    public void Damage(int targetLevel)
     {
-        Debug.Log("Atacou o Inimigo");
+        if (targetLevel >= power)
+        {
+            this.isDead = true;
+            Debug.Log("Inimigo tomou dano");
+        }
+        else
+        {
+            target.isDead = true;
+            Debug.Log("Player tomou dano");
+        }
     }
 }

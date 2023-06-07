@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     private bool isEnemyMoving = false;
     public CODE_Enemy[] enemies;
     public bool equippedItem = false;
+    public bool menuState = false;
 
     void Update()
     {

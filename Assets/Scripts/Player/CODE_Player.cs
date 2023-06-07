@@ -8,6 +8,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     public int level = 1;
     public int bonus = 0;
     public int currentLevel;
+    public bool isDead;
     public delegate void ChangeItem();
     public event ChangeItem ChangedItem;
 
@@ -17,6 +18,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     {
         movePoint.parent = null;
         isMoving = false;
+        isDead = false;
     }
 
     // Update is called once per frame
@@ -24,15 +26,18 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     {
         currentLevel = level + bonus;
         playerAnimator.SetBool("isMoving", isMoving);
-        if (!isMoving && GameManager.Instance.isPlayerTurn)
+        if (!GameManager.Instance.menuState)
         {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1)
+            if (!isMoving && GameManager.Instance.isPlayerTurn)
             {
-                AttemptMove<CODE_IInteractive>(new Vector2(transform.position.x + Input.GetAxisRaw("Horizontal"), transform.position.y));
-            }
-            else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1)
-            {
-                AttemptMove<CODE_IInteractive>(new Vector2(transform.position.x, transform.position.y + Input.GetAxisRaw("Vertical")));
+                if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1)
+                {
+                    AttemptMove<CODE_IInteractive>(new Vector2(transform.position.x + Input.GetAxisRaw("Horizontal"), transform.position.y));
+                }
+                else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1)
+                {
+                    AttemptMove<CODE_IInteractive>(new Vector2(transform.position.x, transform.position.y + Input.GetAxisRaw("Vertical")));
+                }
             }
         }
     }
@@ -42,7 +47,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
         CODE_IDamageable damageable = component as CODE_IDamageable;
         if (damageable != null)
         {
-            damageable.Damage(level + bonus);
+            damageable.Damage(currentLevel);
         }
         else
         {
@@ -66,8 +71,12 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
         GameManager.Instance.isPlayerTurn = false;
     }
 
-    public void Damage(int power)
+    public void Damage(int refPower)
     {
-        Debug.Log("Atacou o Jogador");
+    }
+
+    public void Interact()
+    {
+        
     }
 }
