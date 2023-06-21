@@ -18,7 +18,6 @@ public class GameManager : Singleton<GameManager>
 
         StartCoroutine("MoveEnemies");
     }
-
     private IEnumerator MoveEnemies(){
         isEnemyMoving = true;
         foreach(CODE_Enemy enemy in enemies) {

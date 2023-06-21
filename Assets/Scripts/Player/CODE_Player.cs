@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CODE_Player : CODE_MovingObject, CODE_IDamageable
 {
+    public CODE_UIManager ui;
     public Animator playerAnimator;
     public int level = 1;
     public int bonus = 0;
@@ -24,6 +25,11 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     // Update is called once per frame
     void Update()
     {
+        if (isDead == true )
+        {
+            ui.Gameover();
+            return;
+        }
         currentLevel = level + bonus;
         playerAnimator.SetBool("isMoving", isMoving);
         if (!GameManager.Instance.menuState)

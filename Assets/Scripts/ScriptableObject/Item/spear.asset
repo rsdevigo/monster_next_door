@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Spear
   bonus: 1
-  icon: {fileID: 21300000, guid: 5485e2f56028a3c4cb54f5caa167377e, type: 3}
+  icon: {fileID: 21300000, guid: 9be5991b2d108ec42bad7cb68e7c472b, type: 3}

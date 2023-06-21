@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CODE_UIManager : MonoBehaviour
 {
+    public GameObject panelGameOver;
     public GameObject panel;
     public Image equippedItem;
     public Image newItem;
@@ -20,6 +22,7 @@ public class CODE_UIManager : MonoBehaviour
     private void Start()
     {
         panel.SetActive(false);
+        panelGameOver.SetActive(false);
     }
     public void OnChangedItem()
     {
@@ -31,6 +34,10 @@ public class CODE_UIManager : MonoBehaviour
         equippedItem.sprite = itemImage;
         nameEQ.text = name;
         bonusEq.text = "+ "+bonus;
+    }
+    public void Gameover()
+    {
+        panelGameOver.SetActive(true);
     }
     public void GetNewItemImage(Sprite itemImage, string n, string b)
     {
@@ -46,8 +53,12 @@ public class CODE_UIManager : MonoBehaviour
 
         GameManager.Instance.menuState = false;
     }
-   
-  
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
     public void NoChange()
     {
         panel.SetActive(false);
@@ -56,6 +67,11 @@ public class CODE_UIManager : MonoBehaviour
         GameManager.Instance.menuState = false;
 
     }
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+    }
+
 
 
 }

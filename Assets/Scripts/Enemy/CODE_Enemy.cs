@@ -17,12 +17,16 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
     {
         movePoint.parent = null;
         isMoving = false;
+        isDead = false;
      
     
     }
     private void Update()
     {
-        //Debug.Log(isDead);
+        if (isDead)
+        {
+            Destroy(this.gameObject);
+        }
     }
     public void MoveEnemy()
     {
@@ -56,12 +60,12 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         if (targetLevel >= power)
         {
             this.isDead = true;
-            Debug.Log("Inimigo tomou dano");
+          
         }
         else
         {
             target.isDead = true;
-            Debug.Log("Player tomou dano");
+           
         }
     }
 }
