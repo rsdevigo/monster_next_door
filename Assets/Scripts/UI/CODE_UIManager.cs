@@ -56,6 +56,7 @@ public class CODE_UIManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.Destroy(gameObject);
     }
 
 
