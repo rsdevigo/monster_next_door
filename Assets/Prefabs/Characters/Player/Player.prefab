@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 9073851569941281049}
   - component: {fileID: 9073851569941281050}
   - component: {fileID: 7678454054848970761}
+  - component: {fileID: 2870186116085554058}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -347,8 +348,23 @@ MonoBehaviour:
   movePoint: {fileID: 9073851569470139012}
   blockingLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 832
   moveSpeed: 5
   playerAnimator: {fileID: 9073851568585376453}
   level: 1
   bonus: 0
+  currentLevel: 0
+  isDead: 0
+--- !u!114 &2870186116085554058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9073851569941281510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ac64e123b7aaa40adecd5611222db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Config: {fileID: 11400000, guid: b326ffdf8cda603499980307d04a352b, type: 2}

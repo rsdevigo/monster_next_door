@@ -25,7 +25,7 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
         if (ui.desejatrocar == true)
         {
             player.bonus = this.item.bonus;
-            ui.GetImageEquippedItem(item.icon);
+            ui.GetImageEquippedItem(item.icon,nome,bonus.ToString());
 
             Destroy(this.gameObject);
 
@@ -37,7 +37,7 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
         if (player.bonus == 0)
         {
             player.bonus = this.item.bonus;
-            ui.GetImageEquippedItem(item.icon);
+            ui.GetImageEquippedItem(item.icon, nome, bonus.ToString());
             
             Destroy(this.gameObject);
         }
@@ -45,7 +45,7 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
         {
             // faz com que chame o evento para mostrar a hud
             GameManager.Instance.equippedItem = true;
-            ui.GetNewItemImage(item.icon);
+            ui.GetNewItemImage(item.icon,nome,bonus.ToString());
 
             GameManager.Instance.menuState = true;
         }
