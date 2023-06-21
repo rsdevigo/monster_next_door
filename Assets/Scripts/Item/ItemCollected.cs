@@ -47,6 +47,7 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
             GameManager.Instance.equippedItem = true;
             ui.GetNewItemImage(item.icon,nome,bonus.ToString());
 
+            Destroy(this.gameObject);
             GameManager.Instance.menuState = true;
         }
     }

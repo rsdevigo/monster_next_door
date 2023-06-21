@@ -30,13 +30,13 @@ public class CODE_UIManager : MonoBehaviour
     {
         equippedItem.sprite = itemImage;
         nameEQ.text = name;
-        bonusEq.text = bonus;
+        bonusEq.text = "+ "+bonus;
     }
     public void GetNewItemImage(Sprite itemImage, string n, string b)
     {
         newItem.sprite = itemImage;
         nameNew.text = n;
-        bonusNew.text = b;
+        bonusNew.text = "+ " + b;
     }
    
     public void YesChange()
