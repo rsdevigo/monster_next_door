@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,17 +28,19 @@ public abstract class CODE_MovingObject : MonoBehaviour
 
     protected virtual bool Move(Vector2 position, out RaycastHit2D hit)
     {
+        
         hit = Physics2D.Linecast(transform.position, position, blockingLayer);
         if (hit.transform == null)
         {
             isMoving = true;
             movePoint.position = position;
             StartCoroutine("SmoothMove");
+           
             return true;
         }
         return false;
     }
-
+    
     protected virtual IEnumerator SmoothMove()
     {
         while (Vector2.Distance(transform.position, movePoint.position) > float.Epsilon)
@@ -47,6 +50,6 @@ public abstract class CODE_MovingObject : MonoBehaviour
         }
         isMoving = false;
     }
-
+    
     protected abstract void OnCantMove<T>(T component) where T : CODE_IInteractive;
 }

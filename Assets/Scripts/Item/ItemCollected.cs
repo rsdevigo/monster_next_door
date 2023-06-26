@@ -19,17 +19,6 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
         ui = FindObjectOfType<CODE_UIManager>();
     }
 
-    private void Update()
-    {
-        if (ui.desejatrocar == true)
-        {
-            player.bonus = this.item.bonus;
-            ui.GetImageEquippedItem(this.item.icon, nome, bonus.ToString());
-            Destroy(this.gameObject);
-             
-        }
-    }
-
     public void Interact()
     {
         if (player.bonus == 0)
@@ -44,9 +33,18 @@ public class ItemCollected : MonoBehaviour, CODE_IInteractive
             // faz com que chame o evento para mostrar a hud
             GameManager.Instance.equippedItem = true;
             ui.GetNewItemImage(this.item.icon, nome, bonus.ToString());
-
-            //Destroy(this.gameObject);
             GameManager.Instance.menuState = true;
+            
+        }
+    }
+    public void Trocar()
+    {
+        if (player.bonus != this.item.bonus) // Verifica se o item é diferente do item atualmente equipado
+        {
+            player.bonus = this.item.bonus;
+            ui.GetImageEquippedItem(this.item.icon, nome, bonus.ToString());
+            Destroy(this.gameObject);
+            ui.desejatrocar = false;
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class SpawnPrefab2D : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class SpawnPrefab2D : MonoBehaviour
     void Start()
     {
         SpawnPrefabsAtTilemap();
+
     }
+
 
     void SpawnPrefabsAtTilemap()
     {
@@ -25,10 +28,13 @@ public class SpawnPrefab2D : MonoBehaviour
             {
                 Vector3 spawnPosition = tilemap.CellToWorld(randomTilePosition) + tilemap.cellSize * 0.5f;
                 Instantiate(prefabs[i], spawnPosition, Quaternion.identity);
+                
+                Debug.Log(prefabs[i].gameObject.activeInHierarchy);
+
             }
         }
     }
-
+    
     Vector3Int GetRandomTilePosition()
     {
         BoundsInt tilemapBounds = tilemap.cellBounds;

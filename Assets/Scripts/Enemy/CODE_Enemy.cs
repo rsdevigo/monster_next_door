@@ -21,8 +21,7 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         isMoving = false;
         isDead = false;
         levelUI.text += power.ToString();
-     
-    
+      
     }
     private void Update()
     {
