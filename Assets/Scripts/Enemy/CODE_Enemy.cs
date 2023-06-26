@@ -2,6 +2,7 @@ using SAP2D;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
 {
     public Animator enemyAnimator;
@@ -11,6 +12,7 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
     [SerializeField]
     private SAP2DPathfindingConfig config;
     public Vector2[] path;
+    public TextMeshProUGUI levelUI;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         movePoint.parent = null;
         isMoving = false;
         isDead = false;
+        levelUI.text += power.ToString();
      
     
     }
@@ -25,7 +28,8 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
     {
         if (isDead)
         {
-            Destroy(this.gameObject);
+            enemyAnimator.SetBool("isDead", isDead);
+            Destroy(this.gameObject,0.5f);
         }
     }
     public void MoveEnemy()

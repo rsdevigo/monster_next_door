@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf2f88d7e676d34c99bacc5a3dfa54d, type: 3}
   m_Name: Gloves
   m_EditorClassIdentifier: 
-  nome: 
-  bonus: 0
-  icon: {fileID: 0}
+  nome: Gloves
+  bonus: 1
+  icon: {fileID: 21300000, guid: 1fde285452cae7d4eb3bb42f71dd5647, type: 3}

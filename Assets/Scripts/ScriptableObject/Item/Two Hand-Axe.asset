@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf2f88d7e676d34c99bacc5a3dfa54d, type: 3}
   m_Name: Two Hand-Axe
   m_EditorClassIdentifier: 
-  nome: 
-  bonus: 0
-  icon: {fileID: 0}
+  nome: Axe Two Hand
+  bonus: 7
+  icon: {fileID: 21300000, guid: 12c866f7420f2ee4e8702f7dcb723000, type: 3}

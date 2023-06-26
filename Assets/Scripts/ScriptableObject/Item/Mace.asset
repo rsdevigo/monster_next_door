@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf2f88d7e676d34c99bacc5a3dfa54d, type: 3}
   m_Name: Mace
   m_EditorClassIdentifier: 
-  nome: 
-  bonus: 0
-  icon: {fileID: 0}
+  nome: Mace
+  bonus: 4
+  icon: {fileID: 21300000, guid: 4f64367d69f4c834ba810b72c43a1222, type: 3}

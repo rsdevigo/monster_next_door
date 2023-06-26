@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CODE_Player : CODE_MovingObject, CODE_IDamageable
 {
@@ -12,6 +13,7 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     public bool isDead;
     public delegate void ChangeItem();
     public event ChangeItem ChangedItem;
+    public TextMeshProUGUI levelUI;
 
     // Start is called before the first frame update
 
@@ -25,12 +27,13 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
     // Update is called once per frame
     void Update()
     {
-        if (isDead == true )
+        if (isDead == true)
         {
             ui.Gameover();
             return;
         }
         currentLevel = level + bonus;
+        levelUI.text = "Lv." + currentLevel.ToString();
         playerAnimator.SetBool("isMoving", isMoving);
         if (!GameManager.Instance.menuState)
         {
@@ -58,19 +61,19 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
         else
         {
             component.Interact();
-          if (GameManager.Instance.equippedItem == true)
+            if (GameManager.Instance.equippedItem == true)
             {
 
                 if (ChangedItem != null)
                 {
                     ChangedItem();
                 }
-                
+
             }
         }
         GameManager.Instance.isPlayerTurn = false;
     }
-  
+
     protected override IEnumerator SmoothMove()
     {
         yield return base.SmoothMove();
@@ -83,6 +86,6 @@ public class CODE_Player : CODE_MovingObject, CODE_IDamageable
 
     public void Interact()
     {
-        
+
     }
 }
