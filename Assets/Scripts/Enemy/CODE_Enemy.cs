@@ -63,6 +63,7 @@ public class CODE_Enemy : CODE_MovingObject, CODE_IDamageable
         if (targetLevel >= power)
         {
             this.isDead = true;
+            target.level += 1;
           
         }
         else

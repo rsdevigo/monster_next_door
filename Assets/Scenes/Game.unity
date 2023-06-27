@@ -15441,7 +15441,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 245414219}
   - {fileID: 3263618474696440856, guid: 3ed1ad8a20f0fde4cbc5dada051a56e7, type: 3}
   - {fileID: 3263618474696440856, guid: 0232af8c946ed944cae7ded9fd4780c9, type: 3}
   - {fileID: 3263618474696440856, guid: 7eb85c34e3d580346af24ad0da31851a, type: 3}
@@ -15452,6 +15451,7 @@ MonoBehaviour:
   - {fileID: 3263618474696440856, guid: c9bf0d3c9be4cc54182f76806a2a9447, type: 3}
   - {fileID: 3263618474696440856, guid: 9db6312e88aee5748bc9c18d4181d75a, type: 3}
   - {fileID: 3263618474696440856, guid: 6b3d1eb244a097a449b443bf214b62f8, type: 3}
+  - {fileID: 245414219}
   tilemap: {fileID: 525405697}
 --- !u!1 &2078004513
 GameObject:
